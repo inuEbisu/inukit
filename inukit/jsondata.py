@@ -4,6 +4,7 @@ import os
 class JsonData:
     def __init__(self, path: str):
         self.path = path
+        os.makedirs(os.path.dirname(path), exist_ok=True)
         if not os.path.exists(path):
             self.writes('')
 
