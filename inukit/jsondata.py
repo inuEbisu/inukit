@@ -64,3 +64,8 @@ class JsonData:
 
     def __str__(self):
         return self.reads()
+
+if __name__ == '__main__':
+    jconf = JsonData('src/conf.json')
+    jconf.set('settings.port', 3389)
+    port = jconf.get('settings.port')
